@@ -1,10 +1,15 @@
-import Header from "./components/Header";
+import { useState } from "react";
+import HomeLayout from "./layouts/HomeLayout";
+import LaunchFilters from "./components/specific/LaunchFilters";
 
-//Todo: remove class "pb-8" later
 const App = () => {
+  const [filter, setFilter] = useState<string>("All");
+
   return (
-    <div className="w-full pb-8">
-      <Header></Header>
+    <div className="app">
+      <HomeLayout>
+        <LaunchFilters dateFilter={filter} />
+      </HomeLayout>
     </div>
   );
 };

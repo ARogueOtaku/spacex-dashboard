@@ -1,11 +1,11 @@
-interface ILogoProps {
+export interface IImageProps {
   src: string;
   className: string;
   name: string;
 }
 
-const Logo = ({ src, className, name }: ILogoProps) => {
+const Image = ({ src, className, name }: IImageProps) => {
   return <img src={src} alt={name} className={className} />;
 };
 
-export default Logo;
+export default Image;
